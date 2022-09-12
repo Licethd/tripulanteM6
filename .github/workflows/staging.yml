@@ -36,7 +36,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if anyy
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      run: cd tripulante && mvn jacoco:prepare-agent test install jacoco:report && mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Licethd_tripulanteInte
+      run: cd tripulante && mvn jacoco:prepare-agent test install jacoco:report && mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Licethd_tripulanteM6
 
   release:
     needs: compilacion
@@ -62,4 +62,4 @@ jobs:
               StrictHostKeyChecking no
           END
       - name: Docker build
-        run: ssh staging 'cd tripulanteInte && bash ./deploy.sh'
+        run: ssh staging 'cd tripulanteM6 && bash ./deploy.sh'
