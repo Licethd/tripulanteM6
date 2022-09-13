@@ -9,15 +9,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Licethd/tripulanteInte.git"
+		"url": "git+https://github.com/Licethd/tripulanteM6.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/Licethd/tripulanteInte/issues"
+		"url": "https://github.com/Licethd/tripulanteM6/issues"
 	},
-	"homepage": "https://github.com/Licethd/tripulanteInte#readme",
+	"homepage": "https://github.com/Licethd/tripulanteM6#readme",
 	"devDependencies": {
 		"husky": "^8.0.0",
 		"lint-staged": "^13.0.3"
