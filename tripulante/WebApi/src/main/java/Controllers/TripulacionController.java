@@ -12,6 +12,8 @@ import UsesCases.Command.Tripulacion.Editar.EditarTripulacionCommand;
 import UsesCases.Command.Tripulacion.Eliminar.EliminarTripulacionCommand;
 import UsesCases.Queries.Cargo.GetAll.GetAllCargoQuery;
 import UsesCases.Queries.Cargo.GetByKey.GetCargoByKeyQuery;
+import UsesCases.Queries.Tripulacion.GetAll.GetAllTripulacionQuery;
+import UsesCases.Queries.Tripulacion.GetByKey.GetTripulacionByKeyQuery;
 import Model.Tripulacion.Tripulacion;
 import Model.Tripulante.*;
 import fourteam.http.Exception.HttpException;
@@ -31,15 +33,15 @@ public class TripulacionController {
 
 
 
-    // @GetMapping("/")
-    // public Response<List<Tripulacion>> getAll() throws HttpException {
-    //     return _mediator.send(new GetAllTripulacionQuery());
-    // }
+    @GetMapping("/")
+    public Response<List<Tripulacion>> getAll() throws HttpException {
+        return _mediator.send(new GetAllTripulacionQuery());
+    }
 
-    // @GetMapping("/{key}")
-    // public Response<TripulacionDto> getByKey(@PathVariable GetTripulacionByKeyQuery request) throws HttpException {
-    //     return _mediator.send(request);
-    // }
+    @GetMapping("/{key}")
+    public Response<TripulacionDto> getByKey(@PathVariable GetTripulacionByKeyQuery request) throws HttpException {
+        return _mediator.send(request);
+    }
 
 
     @PostMapping("/registro")

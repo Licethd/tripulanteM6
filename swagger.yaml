@@ -125,7 +125,25 @@ paths:
         name: key
         required: true
       tags: [/tripulante]
+  /tripulacion/:
+    get:
+      summary: /tripulacion getAll
+      operationId: /tripulacion_getAll
+      responses:
+        '200': {description: Response 200}
+      tags: [/tripulacion]
   /tripulacion/{key}:
+    get:
+      summary: /tripulacion getByKey
+      operationId: /tripulacion_getByKey
+      responses:
+        '200': {description: Response 200}
+      parameters:
+      - schema: {type: string}
+        in: path
+        name: key
+        required: true
+      tags: [/tripulacion]
     delete:
       summary: /tripulacion delete
       operationId: /tripulacion_delete

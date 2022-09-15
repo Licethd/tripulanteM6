@@ -8,8 +8,11 @@ import UsesCases.Command.Tripulacion.Eliminar.EliminarTripulacionHandler;
 import UsesCases.Command.Tripulante.Crear.CrearTripulanteHandler;
 import UsesCases.Command.Tripulante.Editar.EditarTripulanteHandler;
 import UsesCases.Command.Tripulante.Eliminar.EliminarTripulanteHandler;
+import UsesCases.Command.Tripulante.UpdateTripulanteWhenTripulacionCreado.UpdateTripulanteWhenTripulacionCreadoHandler;
 import UsesCases.Queries.Cargo.GetAll.GetAllCargoHandler;
 import UsesCases.Queries.Cargo.GetByKey.GetCargoByKeyHandler;
+import UsesCases.Queries.Tripulacion.GetAll.GetAllTripulacionHandler;
+import UsesCases.Queries.Tripulacion.GetByKey.GetTripulacionByKeyHandler;
 import UsesCases.Queries.Tripulante.GetAll.GetAllTripulanteHandler;
 import UsesCases.Queries.Tripulante.GetByKey.GetTripulanteByKeyHandler;
 import Factories.CargoFactory;
@@ -33,6 +36,8 @@ public class Application {
         IMediator.registerHandler(EliminarTripulanteHandler.class);
         IMediator.registerHandler(EditarTripulanteHandler.class);
 
+		IMediator.registerHandler(UpdateTripulanteWhenTripulacionCreadoHandler.class);
+
 		//CARGO
 		IMediator.registerHandler(GetAllCargoHandler.class);
         IMediator.registerHandler(GetCargoByKeyHandler.class);
@@ -42,8 +47,8 @@ public class Application {
         IMediator.registerHandler(EditarCargoHandler.class);
 
 		//TRIPULACION
-		// IMediator.registerHandler(GetAllCargoHandler.class);
-        // IMediator.registerHandler(GetCargoByKeyHandler.class);
+		IMediator.registerHandler(GetAllTripulacionHandler.class);
+        IMediator.registerHandler(GetTripulacionByKeyHandler.class);
 
         IMediator.registerHandler(CrearTripulacionHandler.class);
         IMediator.registerHandler(EliminarTripulacionHandler.class);
