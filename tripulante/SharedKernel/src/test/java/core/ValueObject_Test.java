@@ -8,29 +8,26 @@ import org.mockito.Mockito;
 
 public class ValueObject_Test {
 
-    @Test
-    public void constructor_accept() {
-        BussinessRule rule = Mockito.mock(BussinessRule.class);
-        ValueObject valueObject = new ValueObject() {
-
-        };
-        try {
-            valueObject.CheckRule(null);
-        } catch (Exception e) {
-            Assert.assertTrue(true);
-        }
-        try {
-            when(rule.IsValid()).thenReturn(false);
-            valueObject.CheckRule(rule);
-        } catch (Exception e) {
-            Assert.assertTrue(true);
-        }
-        try {
-            when(rule.IsValid()).thenReturn(true);
-            valueObject.CheckRule(rule);
-        } catch (Exception e) {
-            Assert.assertTrue(true);
-        }
-
+  @Test
+  public void constructor_accept() {
+    BussinessRule rule = Mockito.mock(BussinessRule.class);
+    ValueObject valueObject = new ValueObject() {};
+    try {
+      valueObject.CheckRule(null);
+    } catch (Exception e) {
+      Assert.assertTrue(true);
     }
+    try {
+      when(rule.IsValid()).thenReturn(false);
+      valueObject.CheckRule(rule);
+    } catch (Exception e) {
+      Assert.assertTrue(true);
+    }
+    try {
+      when(rule.IsValid()).thenReturn(true);
+      valueObject.CheckRule(rule);
+    } catch (Exception e) {
+      Assert.assertTrue(true);
+    }
+  }
 }

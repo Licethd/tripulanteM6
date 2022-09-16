@@ -31,7 +31,7 @@ public class UnitOfWork_Test {
 
         UnitOfWork unit = new UnitOfWork(contextTest, mediatorTest);
         List<Object> list = new ArrayList<Object>();
-        list.add(new DomainEvent());
+        list.add(new DomainEvent(){});
         when(contextTest.getDomainEvents()).thenReturn(list);
         unit.commit();
         Assert.assertNotNull(unit);

@@ -2,11 +2,9 @@ package fourteam.http.Exception;
 
 public class HttpCodeException extends Exception {
 
-    private int code;
+  private int code;
 
-    public HttpCodeException(String message) {
-        super(message);
-    }
-
-
+  public HttpCodeException(String message) {
+    super(message);
+  }
 }

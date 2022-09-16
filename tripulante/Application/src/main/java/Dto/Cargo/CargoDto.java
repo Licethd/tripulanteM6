@@ -7,8 +7,7 @@ public class CargoDto {
 	// public Double Sueldo;
 	public String Descripcion;
 
-	public CargoDto() {
-	}
+	public CargoDto() {}
 
 	public CargoDto(UUID key, String descripcion) {
 		this.key = key;

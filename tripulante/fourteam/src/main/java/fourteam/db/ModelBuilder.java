@@ -1,5 +1,3 @@
 package fourteam.db;
 
-public class ModelBuilder {
-    
-}
+public class ModelBuilder {}

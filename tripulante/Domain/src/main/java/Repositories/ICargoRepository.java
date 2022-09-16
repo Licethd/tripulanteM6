@@ -3,7 +3,6 @@ package Repositories;
 import java.util.List;
 import java.util.UUID;
 
-// import Domain.Model.Cargo.Aeronave;
 import Model.Tripulante.Cargo;
 import core.IRepository;
 

@@ -1,9 +1,6 @@
 package core;
 
 public interface BussinessRule {
-
-    boolean IsValid();
-    String Message();
-
-
+  boolean IsValid();
+  String Message();
 }

@@ -1,5 +1,3 @@
 package fourteam.mediator;
 
-public interface Notification {
-    
-}
+public interface Notification {}

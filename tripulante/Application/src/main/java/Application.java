@@ -9,6 +9,7 @@ import UsesCases.Command.Tripulante.Crear.CrearTripulanteHandler;
 import UsesCases.Command.Tripulante.Editar.EditarTripulanteHandler;
 import UsesCases.Command.Tripulante.Eliminar.EliminarTripulanteHandler;
 import UsesCases.Command.Tripulante.UpdateTripulanteWhenTripulacionCreado.UpdateTripulanteWhenTripulacionCreadoHandler;
+import UsesCases.DomainEventHandler.Tripulacion.PublishIntegrationEventWhenTripulacionCreadoHandler;
 import UsesCases.Queries.Cargo.GetAll.GetAllCargoHandler;
 import UsesCases.Queries.Cargo.GetByKey.GetCargoByKeyHandler;
 import UsesCases.Queries.Tripulacion.GetAll.GetAllTripulacionHandler;
@@ -53,6 +54,9 @@ public class Application {
         IMediator.registerHandler(CrearTripulacionHandler.class);
         IMediator.registerHandler(EliminarTripulacionHandler.class);
         IMediator.registerHandler(EditarTripulacionHandler.class);
+
+		IMediator.registerHandler(PublishIntegrationEventWhenTripulacionCreadoHandler.class);
+
 
         // IMediator.registerHandler(UpdateCargoWhenTripulanteCreado.class);
 
