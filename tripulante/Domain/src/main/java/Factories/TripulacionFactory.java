@@ -20,6 +20,7 @@ public class TripulacionFactory implements ITripulacionFactory {
 
 	public Tripulacion Create(String descripcion) {
 
+
 		return new Tripulacion(descripcion);
 	}
 

@@ -18,6 +18,7 @@ public class TripulanteFactory implements ITripulanteFactory {
 			Double horasVuelo, Double nroMillas,
 			Cargo cargo) {
 
+
 		// switch (nombre) {
 		// case Tipo.Aire:
 		// return new Tripulante(nombre, apellido, emailAddress, cargo);

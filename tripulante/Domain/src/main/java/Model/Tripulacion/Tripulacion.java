@@ -85,4 +85,8 @@ public class Tripulacion extends AggregateRoot<UUID> {
 		this.Tripulantes = tripulantes;
 	}
 
+	// public void addDomainEvent(DomainEvent event) {
+	// 	domainEvents.add(event);
+	//   }
+
 }
